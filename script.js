@@ -82,3 +82,30 @@ function writeYourGenres() {
 }
 
 writeYourGenres();
+
+function calculateVolumeAndArea(num) {
+  if(Number.isInteger(num) && num > 0){
+     let S = 6 * num * num;
+     let V = num * num * num;
+     console.log(`'Объем куба:${V}, площадь всей поверхности:${S} `);
+  }else{
+   console.log( "При вычислении произошла ошибка");
+  }
+ }
+ calculateVolumeAndArea(-15);
+
+
+ function getCoupeNumber(num) {
+  
+  if(typeof num !=='number' || num < 0 || Number.isInteger(num) !== true){
+      console.log("Ошибка. Проверьте правильность введенного номера места");
+  }else if(num == 0 || num > 36){
+    console.log("Таких мест в вагоне не существует");
+  }else{
+  let N = Math.ceil(num/4);
+    console.log(N);
+    
+  }
+}
+
+getCoupeNumber(300);
